@@ -32,7 +32,6 @@ local.properties
 
 # node.js
 #
-node_modules/
 npm-debug.log
 
 # BUCK
@@ -40,5 +39,3 @@ buck-out/
 \.buckd/
 android/app/libs
 *.keystore
-
-components
