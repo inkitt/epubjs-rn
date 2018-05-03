@@ -320,6 +320,7 @@ class Epub extends Component {
             this.needsOpen = undefined;
           }
         }}
+        scrollEnabled={this.props.scrollEnabled}
         url={this.props.src}
         flow={this.props.flow}
         minSpreadWidth={this.props.minSpreadWidth}
