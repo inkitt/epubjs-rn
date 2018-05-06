@@ -382,7 +382,7 @@ class Rendition extends Component {
     return <View ref="framer" style={styles.container}>
         <WebViewer ref="webviewbridge" source={{ html: EMBEDDED_HTML, baseUrl: this.props.url }} style={[styles.manager, {
         backgroundColor: this.props.backgroundColor || "#FFFFFF"
-      }]} scalesPageToFit={false} bounces={false} javaScriptEnabled={true} scrollEnabled={true} javaScriptEnabled={true} pagingEnabled={this.props.flow === "paginated"}
+      }]} scalesPageToFit={false} bounces={false} scrollEnabled={this.props.scrollEnabled} javaScriptEnabled={true} pagingEnabled={this.props.flow === "paginated"}
       // onLoadEnd={this._onWebViewLoaded.bind(this)}
       onMessage={this._onBridgeMessage.bind(this)} />
         {!this.state.loaded ? loader : null}

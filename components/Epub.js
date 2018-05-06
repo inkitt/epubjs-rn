@@ -300,7 +300,7 @@ class Epub extends Component {
         this._openBook.apply(this, this.needsOpen);
         this.needsOpen = undefined;
       }
-    }} url={this.props.src} flow={this.props.flow} minSpreadWidth={this.props.minSpreadWidth} stylesheet={this.props.stylesheet} webviewStylesheet={this.props.webviewStylesheet} script={this.props.script} onSelected={this.props.onSelected} onMarkClicked={this.props.onMarkClicked} onPress={this.props.onPress} onLongPress={this.props.onLongPress} onViewAdded={this.props.onViewAdded} beforeViewRemoved={this.props.beforeViewRemoved} themes={this.props.themes} theme={this.props.theme} fontSize={this.props.fontSize} font={this.props.font} display={this.props.location} onRelocated={this.onRelocated.bind(this)} orientation={this.state.orientation} backgroundColor={this.props.backgroundColor} onError={this.props.onError} onDisplayed={this.props.onDisplayed} />;
+    }} scrollEnabled={this.props.scrollEnabled} url={this.props.src} flow={this.props.flow} minSpreadWidth={this.props.minSpreadWidth} stylesheet={this.props.stylesheet} webviewStylesheet={this.props.webviewStylesheet} script={this.props.script} onSelected={this.props.onSelected} onMarkClicked={this.props.onMarkClicked} onPress={this.props.onPress} onLongPress={this.props.onLongPress} onViewAdded={this.props.onViewAdded} beforeViewRemoved={this.props.beforeViewRemoved} themes={this.props.themes} theme={this.props.theme} fontSize={this.props.fontSize} font={this.props.font} display={this.props.location} onRelocated={this.onRelocated.bind(this)} orientation={this.state.orientation} backgroundColor={this.props.backgroundColor} onError={this.props.onError} onDisplayed={this.props.onDisplayed} />;
   }
 }
 
