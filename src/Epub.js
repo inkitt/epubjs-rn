@@ -322,6 +322,7 @@ class Epub extends Component {
         }}
         url={this.props.src}
         flow={this.props.flow}
+        scrollEnabled={this.props.scrollEnabled}
         minSpreadWidth={this.props.minSpreadWidth}
         stylesheet={this.props.stylesheet}
         webviewStylesheet={this.props.webviewStylesheet}

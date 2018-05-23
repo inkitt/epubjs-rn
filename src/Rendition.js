@@ -397,7 +397,7 @@ class Rendition extends Component {
           scalesPageToFit={false}
           bounces={false}
           javaScriptEnabled={true}
-          scrollEnabled={true}
+          scrollEnabled={this.props.scrollEnabled}
           javaScriptEnabled={true}
           pagingEnabled={this.props.flow === "paginated"}
           // onLoadEnd={this._onWebViewLoaded.bind(this)}
