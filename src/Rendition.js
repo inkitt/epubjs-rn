@@ -13,7 +13,7 @@ import {
 } from "react-native";
 
 import WKWebView from 'react-native-wkwebview-reborn';
-
+import AutoHeightWebView from 'react-native-autoheight-webview';
 import EventEmitter from 'event-emitter'
 
 import { readFileSync } from "fs";
@@ -386,23 +386,22 @@ class Rendition extends Component {
       return loader;
     }
 
+console.log('webViewHeight', this.props.webViewHeight)
     return (
       <View ref="framer" style={styles.container}>
-        <WebViewer
-          ref="webviewbridge"
-          source={{html: EMBEDDED_HTML, baseUrl: this.props.url}}
-          style={[styles.manager, {
-            backgroundColor: this.props.backgroundColor || "#FFFFFF"
-          }]}
-          scalesPageToFit={false}
-          bounces={false}
-          javaScriptEnabled={true}
-          scrollEnabled={this.props.scrollEnabled}
-          javaScriptEnabled={true}
-          pagingEnabled={this.props.flow === "paginated"}
-          // onLoadEnd={this._onWebViewLoaded.bind(this)}
-          onMessage={this._onBridgeMessage.bind(this)}
-        />
+        <AutoHeightWebView
+           ref="webviewbridge"
+           source={{html: EMBEDDED_HTML, baseUrl: this.props.url}}
+           style={{ width: Dimensions.get('window').width - 15, marginTop: 35 }}
+           scalesPageToFit={Platform.OS === 'android' ? true : false}
+           bounces={false}
+           javaScriptEnabled={true}
+           scrollEnabled={this.props.scrollEnabled}
+           javaScriptEnabled={true}
+           pagingEnabled={this.props.flow === "paginated"}
+           // onLoadEnd={this._onWebViewLoaded.bind(this)}
+           onMessage={this._onBridgeMessage.bind(this)}
+         />
         {!this.state.loaded ? loader : null}
       </View>
     );
