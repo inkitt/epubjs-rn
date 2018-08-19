@@ -102,6 +102,10 @@ class Epub extends Component {
       return true;
     }
 
+    if (nextProps.theme != this.props.theme) {
+      return true;
+    }
+
     if (nextProps.flow != this.props.flow) {
       return true;
     }
