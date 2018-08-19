@@ -75,7 +75,7 @@ class Rendition extends Component {
       this.themes(this.props.themes);
     }
 
-    if (prevProps.themes !== this.props.theme) {
+    if (prevProps.theme !== this.props.theme) {
       this.theme(this.props.theme);
     }
 

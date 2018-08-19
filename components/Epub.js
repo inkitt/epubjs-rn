@@ -98,7 +98,7 @@ class Epub extends Component {
       return true;
     }
 
-    if (nextProps.size != this.props.size) {
+    if (nextProps.fontSize != this.props.fontSize) {
       return true;
     }
 
